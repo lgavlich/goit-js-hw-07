@@ -15,17 +15,20 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
-const gallery = document.querySelector('#gallery');
-const listImage = images =>  {
-  return images.map(image => {
-    const image = document.createElement('li');
-    item.insertAdjacentHTML('afterbegin', image);
-    return image;
-  });
-}
-//const itemLi = listItem(ingredients);
-//navEl.append(...itemLi);
-//console.log(itemLi)
+
+const imagesMarkup = ({ url, alt } = {}) => {
+  return `
+  <li>
+  <img class = "image" src="${url}" alt="${alt}">
+  </li>
+  `;
+};
+const makeImagesMarkup = images
+  .map(imagesMarkup)
+  .join('');
+const imagesListEl = document.querySelector('#gallery');
+imagesListEl.insertAdjacentHTML("afterbegin", makeImagesMarkup);
+
 
   
 
