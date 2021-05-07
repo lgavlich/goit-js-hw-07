@@ -19,4 +19,4 @@ function decrement(event) {
 
     counterValue.textContent = Number(counterValue.textContent) - 1;
 
- }
+}
