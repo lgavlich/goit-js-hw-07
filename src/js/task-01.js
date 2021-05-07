@@ -1,6 +1,6 @@
 const navEl = document.querySelector('#categories');
-const ChildrenNav = navEl.children;
-const array = Array.from(ChildrenNav);
+const childrenNav = navEl.children;
+const array = Array.from(childrenNav);
 //console.log(array);
 //console.log(ChildrenNav);
 //console.log(navEl.children.length);
